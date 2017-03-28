@@ -1,3 +1,38 @@
 % !TEX root = termithDocumentation.tex
-\section{installation des dépendances}
-\section{téléchargement de termith}
+\section{dépendances externes requises}
+
+il faut s'assurer que les programmes suivants soient installés :
+\begin{itemize}
+  \item \href{http://www.jason-french.com/blog/2013/03/11/installing-r-in-linux/}{R}
+  \item \href{http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/}{Treetagger}
+\end{itemize}
+
+\section{comment installé termith ?}
+
+\begin{enumerate}
+  \item s'assurer que TreeTagger, R et java 8 soient bien installés
+  \item installer les librairie R suivantes : data.table et Rserve
+  \item pour installer Rserve :
+    \begin{enumerate}
+      \item ouvrir un terminal et lancer la commande ci-dessous :
+      \begin{lstlisting}[language=bash]
+      $ R
+      \end{lstlisting}
+      \item dans l'interpréteur de commande R, taper la commande ci-dessous et suivre les instructions :
+      \begin{lstlisting}[language=bash]
+      $ install.packages('Rserve')
+      \end{lstlisting}
+      \item taper ensuite la commande ci-dessous pour charger la librairie précédemment installé :
+      \begin{lstlisting}[language=bash]
+      $ library('Rserve')
+      \end{lstlisting}
+      \item pour lancer le serveur R, taper la commande ci-dessous. Un sous-processus est alors lancé en tâche de fond, le terminal peut être fermé.
+      \begin{lstlisting}[language=bash]
+      $ Rserve()
+      \end{lstlisting}
+      \item pour installer data.table, il faut lancer une instance de R (comme ci-dessus) et lancer la commande :
+      \begin{lstlisting}[language=bash]
+      $ install.packages('data.table')
+      \end{lstlisting}
+    \end{enumerate}
+\end{enumerate}
