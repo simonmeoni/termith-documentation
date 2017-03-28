@@ -1,0 +1,49 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[french]{isodate}
+\usepackage[parfill]{parskip}
+\usepackage[top=3cm, bottom=3cm,left=2.5cm,right=2.5cm]{geometry}
+
+\pagenumbering{Roman}
+\title{Documentation Termith}
+\author{Simon Meoni}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\pagenumbering{arabic}
+\chapter{Installation}
+\label{chap:installation}
+\input{installation}
+
+\chapter{Présentation Générale}
+\label{chap:presentation}
+\input{presentationGenerale}
+
+\chapter{Format de Fichier Utilisé}
+\label{chap:format}
+\input{formatUtilise}
+
+\chapter{Le Module d'Extraction Terminologique}
+\label{chap:terminologie}
+\input{extractionTerminologique}
+
+\chapter{Le Module de Désambiguisation}
+\label{chap:desamb}
+\input{desambiguisation}
+
+\chapter{Limites et Améliorations Possibles}
+\label{chap:limite}
+\input{ameliorationsLimites}
+
+\end{document}
